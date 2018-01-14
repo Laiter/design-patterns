@@ -19,17 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Creational patterns\factory_method.cpp" />
-    <ClCompile Include="Creational patterns\prototype.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="patterns\creational\factory_method.cpp" />
+    <ClCompile Include="patterns\creational\prototype.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Creational patterns\abstract_factory.h" />
-    <ClInclude Include="Creational patterns\adapter.h" />
-    <ClInclude Include="Creational patterns\factory_method.h" />
-    <ClInclude Include="Creational patterns\object_pool.h" />
-    <ClInclude Include="Creational patterns\prototype.h" />
-    <ClInclude Include="Creational patterns\singleton.h" />
+    <ClInclude Include="patterns\creational\abstract_factory.h" />
+    <ClInclude Include="patterns\creational\factory_method.h" />
+    <ClInclude Include="patterns\creational\object_pool.h" />
+    <ClInclude Include="patterns\creational\prototype.h" />
+    <ClInclude Include="patterns\creational\singleton.h" />
+    <ClInclude Include="patterns\structural\adapter.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -89,7 +89,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)\Creational patterns;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

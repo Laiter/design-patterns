@@ -9,46 +9,52 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Файлы ресурсов">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Исходные файлы\Creational patterns">
       <UniqueIdentifier>{b41074b7-f637-4873-8dbd-df2d4c8e5b28}</UniqueIdentifier>
     </Filter>
     <Filter Include="Файлы заголовков\Creational patterns">
       <UniqueIdentifier>{0e2b7f9a-d2d5-4d06-bc19-85df6c110d1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Structural patterns">
+      <UniqueIdentifier>{105de501-72ad-4d9d-bc18-c376b1076283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\Structural patterns">
+      <UniqueIdentifier>{ea966c72-d5e0-4f92-90b5-7896e529cbbf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Creational patterns\factory_method.cpp">
+    <ClCompile Include="patterns\creational\factory_method.cpp">
       <Filter>Исходные файлы\Creational patterns</Filter>
     </ClCompile>
-    <ClCompile Include="Creational patterns\prototype.cpp">
+    <ClCompile Include="patterns\creational\prototype.cpp">
       <Filter>Исходные файлы\Creational patterns</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Creational patterns\factory_method.h">
+    <ClInclude Include="patterns\creational\abstract_factory.h">
       <Filter>Файлы заголовков\Creational patterns</Filter>
     </ClInclude>
-    <ClInclude Include="Creational patterns\abstract_factory.h">
+    <ClInclude Include="patterns\creational\factory_method.h">
       <Filter>Файлы заголовков\Creational patterns</Filter>
     </ClInclude>
-    <ClInclude Include="Creational patterns\singleton.h">
+    <ClInclude Include="patterns\creational\object_pool.h">
       <Filter>Файлы заголовков\Creational patterns</Filter>
     </ClInclude>
-    <ClInclude Include="Creational patterns\prototype.h">
+    <ClInclude Include="patterns\creational\prototype.h">
       <Filter>Файлы заголовков\Creational patterns</Filter>
     </ClInclude>
-    <ClInclude Include="Creational patterns\object_pool.h">
+    <ClInclude Include="patterns\creational\singleton.h">
       <Filter>Файлы заголовков\Creational patterns</Filter>
     </ClInclude>
-    <ClInclude Include="Creational patterns\adapter.h">
-      <Filter>Файлы заголовков\Creational patterns</Filter>
+    <ClInclude Include="patterns\structural\adapter.h">
+      <Filter>Файлы заголовков\Structural patterns</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

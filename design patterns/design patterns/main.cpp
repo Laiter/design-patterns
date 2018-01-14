@@ -1,10 +1,10 @@
 // Design Patterns includes
-#include <factory_method.h>
-#include <abstract_factory.h>
-#include <singleton.h>
-#include <prototype.h>
-#include <object_pool.h>
-#include <adapter.h>
+#include <patterns\creational\factory_method.h>
+#include <patterns\creational\abstract_factory.h>
+#include <patterns\creational\singleton.h>
+#include <patterns\creational\prototype.h>
+#include <patterns\creational\object_pool.h>
+#include <patterns\structural\adapter.h>
 // Standard includes
 #include <vector>
 #include <iostream>
