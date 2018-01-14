@@ -6,6 +6,7 @@
 #include <object_pool.h>
 // Standard includes
 #include <vector>
+#include <iostream>
 
 void doFactoryMethod();
 void doAbstractFactory();
