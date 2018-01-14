@@ -4,14 +4,18 @@
 #include <singleton.h>
 #include <prototype.h>
 #include <object_pool.h>
+#include <adapter.h>
 // Standard includes
 #include <vector>
 #include <iostream>
 
+// Declare functions
+// the definition is provided below
 void doFactoryMethod();
 void doAbstractFactory();
 void doPrototype();
 void doObjectPool();
+void doAdapter();
 
 int main()
 {
@@ -19,6 +23,7 @@ int main()
 	doAbstractFactory();
 	Singleton::getInstance();
 	doPrototype();
+	doAdapter();
 	system("pause");
 }
 
@@ -83,4 +88,19 @@ void doObjectPool()
 		Object* object = pool.createNewObject();
 		pool.deleteObject(object);
 	}
+}
+
+void doAdapter()
+{
+	ExecuteInterface **adapter = InitializeAdapter();
+	for (size_t i = 0; i < 3; i++)
+	{
+		adapter[i]->execute();
+	}
+
+	for (size_t i = 0; i < 3; i++)
+	{
+		delete adapter[i];
+	}
+	delete adapter;
 }

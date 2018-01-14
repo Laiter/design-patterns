@@ -47,5 +47,8 @@
     <ClInclude Include="Creational patterns\object_pool.h">
       <Filter>Файлы заголовков\Creational patterns</Filter>
     </ClInclude>
+    <ClInclude Include="Creational patterns\adapter.h">
+      <Filter>Файлы заголовков\Creational patterns</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

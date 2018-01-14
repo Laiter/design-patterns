@@ -25,6 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Creational patterns\abstract_factory.h" />
+    <ClInclude Include="Creational patterns\adapter.h" />
     <ClInclude Include="Creational patterns\factory_method.h" />
     <ClInclude Include="Creational patterns\object_pool.h" />
     <ClInclude Include="Creational patterns\prototype.h" />
