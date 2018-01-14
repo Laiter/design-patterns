@@ -30,6 +30,7 @@
     <ClInclude Include="patterns\creational\prototype.h" />
     <ClInclude Include="patterns\creational\singleton.h" />
     <ClInclude Include="patterns\structural\adapter.h" />
+    <ClInclude Include="patterns\structural\adapter2.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

@@ -56,5 +56,8 @@
     <ClInclude Include="patterns\structural\adapter.h">
       <Filter>Файлы заголовков\Structural patterns</Filter>
     </ClInclude>
+    <ClInclude Include="patterns\structural\adapter2.h">
+      <Filter>Файлы заголовков\Structural patterns</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

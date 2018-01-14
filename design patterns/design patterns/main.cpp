@@ -1,10 +1,13 @@
 // Design Patterns includes
+// Creational
 #include <patterns\creational\factory_method.h>
 #include <patterns\creational\abstract_factory.h>
 #include <patterns\creational\singleton.h>
 #include <patterns\creational\prototype.h>
 #include <patterns\creational\object_pool.h>
+// Structural
 #include <patterns\structural\adapter.h>
+#include <patterns\structural\adapter2.h>
 // Standard includes
 #include <vector>
 #include <iostream>
@@ -13,22 +16,26 @@
 // the definition is provided below
 void doFactoryMethod();
 void doAbstractFactory();
+void doSingleton();
 void doPrototype();
 void doObjectPool();
 void doAdapter();
+void doAdapter2();
 
 int main()
 {
 	doFactoryMethod();
 	doAbstractFactory();
-	Singleton::getInstance();
+	doSingleton();
 	doPrototype();
 	doAdapter();
+	doAdapter2();
 	system("pause");
 }
 
 void doFactoryMethod()
 {
+	std::cout << std::endl << "Factory Method:" << std::endl;
 	std::vector<Stooge*> roles;
 	int choice;
 	while (true)
@@ -47,6 +54,7 @@ void doFactoryMethod()
 
 void doAbstractFactory()
 {
+	std::cout << std::endl << "Abstract Factory:" << std::endl;
 	AbstractFactory::Factory* factory = 0;
 #ifndef WINDOWS
 	factory = new AbstractFactory::LinuxFactory;
@@ -60,8 +68,16 @@ void doAbstractFactory()
 	display_window_two(factory);
 }
 
+void doSingleton()
+{
+	std::cout << std::endl << "Singleton:" << std::endl;
+	Singleton::getInstance();
+	Singleton::getInstance();
+}
+
 void doPrototype()
 {
+	std::cout << std::endl << "Prototype:" << std::endl;
 	std::vector<Prototype::Stooge *> roles;
 	int choice;
 
@@ -82,6 +98,7 @@ void doPrototype()
 
 void doObjectPool()
 {
+	std::cout << std::endl << "Object Pool:" << std::endl;
 	ObjectPool pool;
 	for (size_t i = 0; i < 1000; ++i)
 	{
@@ -92,6 +109,7 @@ void doObjectPool()
 
 void doAdapter()
 {
+	std::cout << std::endl << "Adapter:" << std::endl;
 	ExecuteInterface **adapter = InitializeAdapter();
 	for (size_t i = 0; i < 3; i++)
 	{
@@ -103,4 +121,11 @@ void doAdapter()
 		delete adapter[i];
 	}
 	delete adapter;
+}
+
+void doAdapter2()
+{
+	std::cout << std::endl << "Adapter2:" << std::endl;
+	Rectangle *r = new RectangleAdapter(100, 200, 50, 20);
+	r->draw();
 }
