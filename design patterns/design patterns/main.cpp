@@ -8,6 +8,7 @@
 // Structural
 #include <patterns\structural\adapter.h>
 #include <patterns\structural\adapter2.h>
+#include <patterns\structural\decorator.h>
 // Standard includes
 #include <vector>
 #include <iostream>
@@ -21,7 +22,9 @@ void doPrototype();
 void doObjectPool();
 void doAdapter();
 void doAdapter2();
+void doDecorator();
 
+// Main
 int main()
 {
 	doFactoryMethod();
@@ -30,9 +33,11 @@ int main()
 	doPrototype();
 	doAdapter();
 	doAdapter2();
+	doDecorator();
 	system("pause");
 }
 
+// Function def
 void doFactoryMethod()
 {
 	std::cout << std::endl << "Factory Method:" << std::endl;
@@ -128,4 +133,14 @@ void doAdapter2()
 	std::cout << std::endl << "Adapter2:" << std::endl;
 	Rectangle *r = new RectangleAdapter(100, 200, 50, 20);
 	r->draw();
+}
+
+void doDecorator()
+{
+	std::cout << std::endl << "Decorator:" << std::endl;
+	Decorator::Widget *decorator = 
+		new Decorator::MoreFunDecorator(
+			new Decorator::FunDecorator(
+				new Decorator::Stuff({ 4, 8, 15, 16, 23, 42 })));
+	decorator->draw();
 }
