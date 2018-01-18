@@ -62,5 +62,8 @@
     <ClInclude Include="patterns\structural\decorator.h">
       <Filter>Файлы заголовков\Structural patterns</Filter>
     </ClInclude>
+    <ClInclude Include="patterns\structural\proxy.h">
+      <Filter>Файлы заголовков\Structural patterns</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

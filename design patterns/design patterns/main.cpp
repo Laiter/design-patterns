@@ -9,6 +9,7 @@
 #include <patterns\structural\adapter.h>
 #include <patterns\structural\adapter2.h>
 #include <patterns\structural\decorator.h>
+#include <patterns\structural\proxy.h>
 // Standard includes
 #include <vector>
 #include <iostream>
@@ -23,6 +24,7 @@ void doObjectPool();
 void doAdapter();
 void doAdapter2();
 void doDecorator();
+void doProxy();
 
 // Main
 int main()
@@ -34,6 +36,7 @@ int main()
 	doAdapter();
 	doAdapter2();
 	doDecorator();
+	doProxy();
 	system("pause");
 }
 
@@ -143,4 +146,12 @@ void doDecorator()
 			new Decorator::FunDecorator(
 				new Decorator::Stuff({ 4, 8, 15, 16, 23, 42 })));
 	decorator->draw();
+}
+
+void doProxy()
+{
+	std::cout << std::endl << "Proxy:" << std::endl;
+	ProxySubject a("the quick brown fox jumped over the dog");
+	a.execute();
+	a->execute();
 }
