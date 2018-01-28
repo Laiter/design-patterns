@@ -65,5 +65,8 @@
     <ClInclude Include="patterns\structural\proxy.h">
       <Filter>Файлы заголовков\Structural patterns</Filter>
     </ClInclude>
+    <ClInclude Include="patterns\structural\composite.h">
+      <Filter>Файлы заголовков\Structural patterns</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

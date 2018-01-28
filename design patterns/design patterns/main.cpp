@@ -10,6 +10,7 @@
 #include <patterns\structural\adapter2.h>
 #include <patterns\structural\decorator.h>
 #include <patterns\structural\proxy.h>
+#include <patterns\structural\composite.h>
 // Standard includes
 #include <vector>
 #include <iostream>
@@ -25,6 +26,7 @@ void doAdapter();
 void doAdapter2();
 void doDecorator();
 void doProxy();
+void doComposite();
 
 // Main
 int main()
@@ -37,6 +39,7 @@ int main()
 	doAdapter2();
 	doDecorator();
 	doProxy();
+	doComposite();
 	system("pause");
 }
 
@@ -154,4 +157,24 @@ void doProxy()
 	ProxySubject a("the quick brown fox jumped over the dog");
 	a.execute();
 	a->execute();
+}
+
+void doComposite()
+{
+	std::cout << std::endl << "Composite:" << std::endl;
+	Row first(1);
+	Row second(2);
+	Column third(3);
+	Column fourth(4);
+	Row fifth(5);
+	first.add(&second);
+	first.add(&third);
+	third.add(&fourth);
+	third.add(&fifth);
+	first.add(&Primitive(6));
+	second.add(&Primitive(7));
+	third.add(&Primitive(8));
+	fourth.add(&Primitive(9));
+	fifth.add(&Primitive(10));
+	first.traverse();
 }

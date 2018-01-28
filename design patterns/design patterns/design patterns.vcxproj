@@ -31,6 +31,7 @@
     <ClInclude Include="patterns\creational\singleton.h" />
     <ClInclude Include="patterns\structural\adapter.h" />
     <ClInclude Include="patterns\structural\adapter2.h" />
+    <ClInclude Include="patterns\structural\composite.h" />
     <ClInclude Include="patterns\structural\decorator.h" />
     <ClInclude Include="patterns\structural\proxy.h" />
   </ItemGroup>
